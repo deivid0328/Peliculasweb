@@ -37,10 +37,26 @@ const peliculas = [
     }
 ]
 const contenedor = document.getElementById("contenedor");
-    peliculas.map((pelicula) => {
 
-    const card = document.createElement("div");
+    peliculas.map((pelicula) => {
+       
+        const card = document.createElement("div");
+        card.onclick = function(){
+            if (pelicula.id == pelicula.id){
+                // window.location.href("./card.html")
+                const contenedorpeli = document.getElementById("peli");
+                const titulopeli = document.createElement("h1");
+                titulopeli.textContent=pelicula.name;
+                contenedorpeli.appendChild(titulopeli);
+            }
+        }
+        // function(event) { console.log(event.target.pelicula.id) };
+        // card.setAttribute('onclick', info());
+      
+
+    card.setAttribute('id', pelicula.id);
     card.setAttribute('class', 'card__contenedor');
+   
     contenedor.appendChild(card);
 
     const cardimg = document.createElement("div")
@@ -74,3 +90,7 @@ const contenedor = document.getElementById("contenedor");
 })
 
 
+function info(){
+console.log("copas")
+
+}
