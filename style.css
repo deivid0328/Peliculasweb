@@ -262,3 +262,15 @@ width: 50%;
 .popup__sinopsis{
 width: 50%;
 }
+
+.popup__contenedor{
+position: relative;
+}
+
+.cerrar{
+    position: absolute;
+    top: 80vh;
+    right: 12%;
+    cursor:pointer;
+    z-index: 10;
+}

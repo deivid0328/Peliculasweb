@@ -103,8 +103,20 @@ const fragment= document.createDocumentFragment();
                 parrafo.textContent=pelicula.resumen;
                 popup__sinopsis.appendChild(parrafo)
 
+               
+                const cerrar = document.createElement('div')
+                cerrar.setAttribute('class', 'cerrar')
+                ventana.appendChild(cerrar)
 
-
+                const icon =document.createElement("img")
+                icon.setAttribute('src', 'https://img.icons8.com/ios-glyphs/30/000000/delete-sign.png');
+                cerrar.appendChild(icon)
+                     
+                cerrar.onclick = function(){
+                    const lose=document.getElementById("ventana")
+                    lose.style.display = 'none';
+                }
+            
 
 
 
@@ -148,7 +160,5 @@ const fragment= document.createDocumentFragment();
 
 })
 
-
 contenedor.appendChild(fragment)
-
 
